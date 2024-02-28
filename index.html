@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        html{
+            background-color: black;
+        }
+        textarea {
+            background: #333;
+            color: white;
+        }
+    </style>
+    <script src="main.js"></script>
+    <body>
+        <textarea id="fileInput" rows="20" cols="50"></textarea>
+        <textarea id="textInput" rows="20" cols="50"></textarea><br>
+        <button onclick='interpret(document.getElementById("fileInput").value
+        , document.getElementById("textInput").value.replace(/[^0-9\s]/g," ").replace(/\s+/g, " ").trim().split(" "))'>do</button>
+        <button onclick='download(document.getElementById("fileNames").value+".bf", document.getElementById("fileInput").value);
+        download(document.getElementById("fileNames").value+".txt", document.getElementById("textInput").value);
+        '>save</button>
+        <button onclick='download(document.getElementById("fileNames").value+".bf", document.getElementById("fileInput").value);'>saveCode</button>
+        <input id="fileNames" value='file'></input>
+    </body>
+</html>
